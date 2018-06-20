@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using OneStopElectronix.Areas.Admin.Models;
 
 namespace OneStopElectronix.Models
 {
@@ -29,5 +30,8 @@ namespace OneStopElectronix.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<MainCategory> MainCategories { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
     }
 }
