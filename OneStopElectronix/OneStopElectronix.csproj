@@ -195,6 +195,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -212,6 +214,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\demo.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\main-style.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -221,6 +227,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Admin.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -232,6 +243,37 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\css\bootstrap.css" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\css\font-awesome.min.css" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\css\style.css" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\img\dummyimg.png" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\css\demo.css" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\css\main-style.css" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\1.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\10.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\11.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\12.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\13.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\14.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\15.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\2.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\3.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\4.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\5.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\6.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\7.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\8.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\images\9.jpg" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\index.html" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\js\jquery.catslider.js" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\ItemSlider\js\modernizr.custom.63321.js" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\js\bootstrap.js" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\js\bootstrap.min.js" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\js\jquery-1.10.2.js" />
+    <Content Include="Views\Home\bs-digishop-mini\index.html" />
+    <Content Include="Views\Shared\shop.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -243,8 +285,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -266,9 +306,20 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\FontAwesome.otf" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Views\Home\bs-digishop-mini\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Home\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
