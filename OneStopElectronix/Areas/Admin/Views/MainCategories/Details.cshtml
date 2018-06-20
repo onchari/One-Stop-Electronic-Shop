@@ -1,0 +1,35 @@
+﻿@model OneStopElectronix.Areas.Admin.Models.MainCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MainCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MainCategoriesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainCategoriesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainCategoriesDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainCategoriesDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MainCategoryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
